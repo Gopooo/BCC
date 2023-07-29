@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blue Chest Checker</title>
+</head>
+<body>
+    <h1>Numéro de série:</h1>
+    <img src="240.jpg" alt="Blue Chest">
+    <input type="text" id="codeInput">
+    <button onclick="checkCode()">Verify</button>
+    <p id="message"></p>
+
+    <script>
+        function checkCode() {
+            // Get the value entered by the user
+            var codeEntered = document.getElementById('codeInput').value;
+
+            // Check if the code is "W0172" or "W0171" or 'W2179.'
+            if (codeEntered === 'W0172' || codeEntered === 'W0171' || codeEntered === 'W2179.') {
+                document.getElementById('message').innerText = "It's Wildstorm's chest.";
+            } else if (codeEntered === 'W0171.' || codeEntered === 'W2179') {
+                document.getElementById('message').innerText = "It's Ro Bow's chest.";
+            } else {
+                document.getElementById('message').innerText = "Incorrect code.";
+            }
+        }
+    </script>
+</body>
+</html>
